@@ -13,6 +13,7 @@ function App() {
 
   return (
     <div className="App">
+      {console.log('deployed?')}
       <div className="App-header">
      Some reasons to love:<img
       data-testid="circleci-button"
@@ -27,6 +28,8 @@ function App() {
     </div>
   );
 }
+
+
 
 function RandomText({text}) {
 
