@@ -10,16 +10,10 @@ function App() {
     setText(data[randomIndex])
   }
 
-  useEffect( () => {
-    console.log(text)
-  }, [text])
-
-
 
   return (
     <div className="App">
       <div className="App-header">
-
      Some reasons to love:<img
       data-testid="circleci-button"
       src={circleci} 
