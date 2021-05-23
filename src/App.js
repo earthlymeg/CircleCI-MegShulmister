@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
-
+import circleci from './assets/circleci.png';
+import data from './data/data';
+import {useState, useEffect} from 'react';
 function App() {
+
+  const [text, setText] = useState('');
+  function generateText() {
+    let randomIndex = Math.floor(Math.random() * data.length);
+    setText(data[randomIndex])
+  }
+
+  useEffect( () => {
+    console.log(text)
+  }, [text])
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+     Some reasons to love:<img
+      data-testid="circleci-button"
+      src={circleci} 
+      alt="CircleCI"
+      onClick={e => {
+        generateText();
+      }}
+      />
+      <RandomText text={text}/>
+     </div>
     </div>
   );
+}
+
+function RandomText({text}) {
+
+
+  return (
+    <div data-testid="random-text">
+      {text}
+    </div>
+  )
 }
 
 export default App;
