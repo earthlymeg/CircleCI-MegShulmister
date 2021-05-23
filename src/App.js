@@ -10,9 +10,6 @@ function App() {
     setText(data[randomIndex])
   }
 
-  useEffect( () => {
-    console.log(text)
-  }, [text])
 
 
 
