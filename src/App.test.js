@@ -11,7 +11,7 @@ const data = [
   "Great People"
 ];
 
-test('button click renders a Random Text element', () => {
+test('button click renders a Random Text component', () => {
   render(<App />);
   const button = screen.getByTestId('circleci-button')
   
