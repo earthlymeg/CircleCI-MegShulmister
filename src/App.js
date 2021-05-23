@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-        Checking to see if deployed <br></br>
+
      Some reasons to love:<img
       data-testid="circleci-button"
       src={circleci} 
